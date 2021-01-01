@@ -1,0 +1,13 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  nuxt:
+    build:
+      context: ./
+    container_name: node12_portfolio
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: bash -c "npm install && npm run dev"
